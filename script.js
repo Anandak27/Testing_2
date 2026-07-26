@@ -200,3 +200,30 @@ reasonCards.forEach(card => {
     });
 
 });
+
+
+// LETTER
+
+const letter = document.querySelector(".letter-box");
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            letter.style.opacity="1";
+
+            letter.style.transform="translateY(0) scale(1)";
+
+        }
+
+    });
+
+});
+
+letter.style.opacity="0";
+letter.style.transform="translateY(100px) scale(.9)";
+letter.style.transition="1s ease";
+
+observer.observe(letter);
