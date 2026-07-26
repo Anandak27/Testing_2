@@ -293,7 +293,7 @@ box-shadow:0 20px 50px rgba(255,77,141,.5);
 
 /* Video Box */
 
-#videoBox{
+/* #videoBox{
 
     display:none;
 
@@ -316,6 +316,40 @@ box-shadow:0 20px 50px rgba(255,77,141,.5);
     0 15px 50px rgba(0,0,0,.5),
     0 0 25px rgba(255,75,43,.35);
 
+} */
+
+#videoBox{
+    display: none;
+
+    width: 100%;
+
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: zoomIn .8s ease;
+}
+
+/* Video */
+
+#birthdayVideo{
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 25px;
+
+    border: 3px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.5),
+        0 0 25px rgba(255,75,43,.35);
 }
 
 /* Floating Sparkles */
