@@ -228,16 +228,31 @@ letter.style.transition="1s ease";
 
 observer.observe(letter);
 
+// VIDEO
+// function playVideo() {
+
+//     const box = document.getElementById("videoBox");
+//     const video = document.getElementById("birthdayVideo");
+
+//     box.style.display = "block";
+
+//     box.scrollIntoView({
+//         behavior: "smooth"
+//     });
+
+//     video.play();
+// }
 
 function playVideo() {
 
     const box = document.getElementById("videoBox");
     const video = document.getElementById("birthdayVideo");
 
-    box.style.display = "block";
+    box.style.display = "flex";   // <-- use flex instead of block
 
     box.scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "center"
     });
 
     video.play();
