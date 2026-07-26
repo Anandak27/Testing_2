@@ -105,7 +105,7 @@ margin-right:auto;
 }
 
 /*video*/
-.video-surprise{
+/* .video-surprise{
 
 padding:80px 10%;
 
@@ -149,8 +149,300 @@ border-radius:25px;
 
 box-shadow:0 20px 50px rgba(255,77,141,.5);
 
+} */
+
+/* ===========================
+   PREMIUM VIDEO SURPRISE
+=========================== */
+
+.video-surprise{
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 30px;
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,.35),
+    inset 0 0 20px rgba(255,255,255,.08);
+
+    animation: fadeUp 1s ease;
 }
 
+/* Animated Background */
+
+.video-surprise::before{
+    content:'';
+    position:absolute;
+    inset:-50%;
+    background:linear-gradient(
+        45deg,
+        #ff0080,
+        #ff4d6d,
+        #7b2ff7,
+        #00c6ff,
+        #ff0080
+    );
+    background-size:400%;
+    animation:gradientMove 10s linear infinite;
+    opacity:.25;
+    filter:blur(120px);
+}
+
+/* Title */
+
+.video-surprise h2{
+    position:relative;
+    z-index:2;
+
+    font-size:42px;
+    color:#fff;
+    margin-bottom:35px;
+
+    text-shadow:
+    0 0 15px #ff4d6d,
+    0 0 35px #ff4d6d;
+
+    animation: glow 2s infinite alternate;
+}
+
+/* Premium Button */
+
+.play-btn{
+
+    position:relative;
+    z-index:2;
+
+    padding:18px 42px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    color:#fff;
+
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ff416c,
+        #ff4b2b
+    );
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 30px rgba(255,75,43,.45);
+
+}
+
+/* Shine Effect */
+
+.play-btn::before{
+
+    content:'';
+
+    position:absolute;
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:rgba(255,255,255,.45);
+
+    transform:skewX(-30deg);
+
+    transition:.7s;
+
+}
+
+.play-btn:hover::before{
+    left:150%;
+}
+
+.play-btn:hover{
+
+    transform:
+    translateY(-6px)
+    scale(1.06);
+
+    box-shadow:
+    0 18px 45px rgba(255,75,43,.7);
+
+}
+
+.play-btn:active{
+
+    transform:scale(.95);
+
+}
+
+/* Video Box */
+
+#videoBox{
+
+    display:none;
+
+    margin-top:40px;
+
+    animation:zoomIn .8s ease;
+
+}
+
+/* Video */
+
+#birthdayVideo{
+
+    width:100%;
+    border-radius:25px;
+
+    border:3px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.5),
+    0 0 25px rgba(255,75,43,.35);
+
+}
+
+/* Floating Sparkles */
+
+.video-surprise span{
+
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:white;
+    animation:floatStar 6s linear infinite;
+
+}
+
+/* Animations */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:400%;
+}
+
+}
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 15px #ff4d6d;
+}
+
+to{
+text-shadow:
+0 0 30px #ff4d6d,
+0 0 60px #ff4d6d;
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes zoomIn{
+
+from{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+@keyframes floatStar{
+
+0%{
+
+transform:translateY(0);
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-250px);
+opacity:0;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.video-surprise{
+
+padding:35px 20px;
+
+}
+
+.video-surprise h2{
+
+font-size:30px;
+
+}
+
+.play-btn{
+
+font-size:17px;
+padding:15px 28px;
+
+}
+
+}
 
 /* LETTER */
 
