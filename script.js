@@ -245,15 +245,22 @@ observer.observe(letter);
 
 function playVideo() {
 
-    const box = document.getElementById("videoBox");
+    const videoBox = document.getElementById("videoBox");
     const video = document.getElementById("birthdayVideo");
+    const button = document.getElementById("surpriseBtn");
 
-    box.style.display = "flex";   // <-- use flex instead of block
+    // Hide the button
+    button.style.display = "none";
 
-    box.scrollIntoView({
+    // Show the video
+    videoBox.style.display = "flex";
+
+    // Scroll to video
+    videoBox.scrollIntoView({
         behavior: "smooth",
         block: "center"
     });
 
+    // Play the video
     video.play();
 }
