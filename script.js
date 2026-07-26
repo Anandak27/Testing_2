@@ -227,3 +227,18 @@ letter.style.transform="translateY(100px) scale(.9)";
 letter.style.transition="1s ease";
 
 observer.observe(letter);
+
+
+function playVideo() {
+
+    const box = document.getElementById("videoBox");
+    const video = document.getElementById("birthdayVideo");
+
+    box.style.display = "block";
+
+    box.scrollIntoView({
+        behavior: "smooth"
+    });
+
+    video.play();
+}
