@@ -151,83 +151,39 @@ box-shadow:0 20px 50px rgba(255,77,141,.5);
 
 } */
 
-/* ===========================
-   PREMIUM VIDEO SURPRISE
-=========================== */
-
 .video-surprise{
-    position: relative;
-    width: 90%;
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 50px 30px;
-    text-align: center;
-    border-radius: 30px;
-    overflow: hidden;
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
+    padding:50px 30px;
+    text-align:center;
 
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 
-    border:1px solid rgba(255,255,255,.18);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.15);
 
-    box-shadow:
-    0 8px 32px rgba(0,0,0,.35),
-    inset 0 0 20px rgba(255,255,255,.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
 
-    animation: fadeUp 1s ease;
+    animation:fadeUp 1s ease;
 }
-
-/* Animated Background */
-
-.video-surprise::before{
-    content:'';
-    position:absolute;
-    inset:-50%;
-    background:linear-gradient(
-        45deg,
-        #ff0080,
-        #ff4d6d,
-        #7b2ff7,
-        #00c6ff,
-        #ff0080
-    );
-    background-size:400%;
-    animation:gradientMove 10s linear infinite;
-    opacity:.25;
-    filter:blur(120px);
-}
-
-/* Title */
 
 .video-surprise h2{
-    position:relative;
-    z-index:2;
-
-    font-size:42px;
     color:#fff;
-    margin-bottom:35px;
-
-    text-shadow:
-    0 0 15px #ff4d6d,
-    0 0 35px #ff4d6d;
-
-    animation: glow 2s infinite alternate;
+    font-size:40px;
+    margin-bottom:30px;
+    text-shadow:0 0 20px hotpink;
 }
 
-/* Premium Button */
+/* ===============================
+   BUTTON
+================================= */
 
 .play-btn{
 
-    position:relative;
-    z-index:2;
-
-    padding:18px 42px;
-
-    font-size:20px;
-    font-weight:bold;
-
-    color:#fff;
+    padding:18px 45px;
 
     border:none;
     outline:none;
@@ -236,162 +192,69 @@ box-shadow:0 20px 50px rgba(255,77,141,.5);
 
     border-radius:50px;
 
-    background:linear-gradient(
-        135deg,
-        #ff416c,
-        #ff4b2b
-    );
+    font-size:20px;
+    font-weight:bold;
 
-    transition:.4s;
+    color:#fff;
+
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+
+    transition:.35s;
 
     box-shadow:
-    0 10px 30px rgba(255,75,43,.45);
+    0 10px 25px rgba(255,75,43,.45);
 
-}
-
-/* Shine Effect */
-
-.play-btn::before{
-
-    content:'';
-
-    position:absolute;
-    top:0;
-    left:-120%;
-
-    width:60%;
-    height:100%;
-
-    background:rgba(255,255,255,.45);
-
-    transform:skewX(-30deg);
-
-    transition:.7s;
-
-}
-
-.play-btn:hover::before{
-    left:150%;
 }
 
 .play-btn:hover{
 
-    transform:
-    translateY(-6px)
-    scale(1.06);
+    transform:translateY(-5px) scale(1.05);
 
     box-shadow:
-    0 18px 45px rgba(255,75,43,.7);
+    0 20px 40px rgba(255,75,43,.65);
 
 }
 
-.play-btn:active{
+/* ===============================
+   VIDEO BOX
+================================= */
 
-    transform:scale(.95);
-
-}
-
-/* Video Box */
-
-/* #videoBox{
+#videoBox{
 
     display:none;
 
-    margin-top:25px;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+    margin-top:40px;
 
     animation:zoomIn .8s ease;
 
 }
 
-/* Video */
+/* ===============================
+   VIDEO
+================================= */
 
 #birthdayVideo{
 
-    width:100%;
-    border-radius:25px;
+    width:90%;
+    max-width:850px;
 
-    border:3px solid rgba(255,255,255,.15);
+    border-radius:20px;
 
-    box-shadow:
-    0 15px 50px rgba(0,0,0,.5),
-    0 0 25px rgba(255,75,43,.35);
-
-} */
-
-#videoBox{
-    display: none;
-
-    width: 100%;
-
-    margin-top: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    animation: zoomIn .8s ease;
-}
-
-/* Video */
-
-#birthdayVideo{
-    width: 90%;
-    max-width: 800px;
-    height: auto;
-
-    display: block;
-
-    margin: 0 auto;
-
-    border-radius: 25px;
-
-    border: 3px solid rgba(255,255,255,.15);
+    display:block;
 
     box-shadow:
-        0 15px 50px rgba(0,0,0,.5),
-        0 0 25px rgba(255,75,43,.35);
-}
-
-/* Floating Sparkles */
-
-.video-surprise span{
-
-    position:absolute;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:white;
-    animation:floatStar 6s linear infinite;
+    0 15px 40px rgba(0,0,0,.45);
 
 }
 
-/* Animations */
-
-@keyframes gradientMove{
-
-0%{
-background-position:0%;
-}
-
-100%{
-background-position:400%;
-}
-
-}
-
-@keyframes glow{
-
-from{
-text-shadow:0 0 15px #ff4d6d;
-}
-
-to{
-text-shadow:
-0 0 30px #ff4d6d,
-0 0 60px #ff4d6d;
-}
-
-}
+/* ===============================
+   ANIMATIONS
+================================= */
 
 @keyframes fadeUp{
 
@@ -429,37 +292,15 @@ transform:scale(1);
 
 }
 
-@keyframes floatStar{
-
-0%{
-
-transform:translateY(0);
-opacity:0;
-
-}
-
-50%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(-250px);
-opacity:0;
-
-}
-
-}
-
-/* Mobile */
+/* ===============================
+   MOBILE
+================================= */
 
 @media(max-width:768px){
 
 .video-surprise{
-margin-top:120px;
-padding:35px 20px;
+
+padding:35px 15px;
 
 }
 
@@ -471,8 +312,14 @@ font-size:30px;
 
 .play-btn{
 
-font-size:17px;
-padding:15px 28px;
+font-size:18px;
+padding:15px 30px;
+
+}
+
+#birthdayVideo{
+
+width:100%;
 
 }
 
